@@ -206,8 +206,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-SWIFT_CLASS("_TtC12TangerineKey19TangerineELDManager")
-@interface TangerineELDManager : NSObject
+SWIFT_CLASS("_TtC12TangerineKey19TangerineKeyManager")
+@interface TangerineKeyManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -216,7 +216,7 @@ SWIFT_CLASS("_TtC12TangerineKey19TangerineELDManager")
 @class CBService;
 @class CBCharacteristic;
 
-@interface TangerineELDManager (SWIFT_EXTENSION(TangerineKey)) <CBPeripheralDelegate>
+@interface TangerineKeyManager (SWIFT_EXTENSION(TangerineKey)) <CBPeripheralDelegate>
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverServices:(NSError * _Nullable)error;
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverCharacteristicsForService:(CBService * _Nonnull)service error:(NSError * _Nullable)error;
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didWriteValueForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
@@ -226,7 +226,7 @@ SWIFT_CLASS("_TtC12TangerineKey19TangerineELDManager")
 @class CBCentralManager;
 @class NSNumber;
 
-@interface TangerineELDManager (SWIFT_EXTENSION(TangerineKey)) <CBCentralManagerDelegate>
+@interface TangerineKeyManager (SWIFT_EXTENSION(TangerineKey)) <CBCentralManagerDelegate>
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
 - (void)centralManager:(CBCentralManager * _Nonnull)central didConnectPeripheral:(CBPeripheral * _Nonnull)peripheral;
